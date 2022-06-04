@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "e51bf2d6-bb1d-4792-a3ee-49bbbf6d6d4e",
+		"name": "海昌",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登录获取cookie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+						"disabled": true
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"disabled": true
+					},
+					{
+						"key": "Referer",
+						"value": "https://weixin.haichangchina.com/login?redir=/list/order",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://weixin.haichangchina.com/leaguerLogin?loginName={{login_phone}}&loginPass={{login_password}}",
+					"protocol": "https",
+					"host": [
+						"weixin",
+						"haichangchina",
+						"com"
+					],
+					"path": [
+						"leaguerLogin"
+					],
+					"query": [
+						{
+							"key": "loginName",
+							"value": "{{login_phone}}"
+						},
+						{
+							"key": "loginPass",
+							"value": "{{login_password}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "单人",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie_haichang}}",
+						"disabled": true
+					},
+					{
+						"key": "Origin",
+						"value": "https://weixin.haichangchina.com",
+						"disabled": true
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"disabled": true
+					},
+					{
+						"key": "Referer",
+						"value": "https://weixin.haichangchina.com/order/ticket/ticket2022060100442083?parkId=10",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://weixin.haichangchina.com/order/ticket?rateCode={{ticket_danren}}&beginDate={{date_haichang}}&endDate={{date_haichang}}&parkId=10&couponCode=&couponCheckCode=&amount=1&linkMans={{consumer_name}}&teles={{login_phone}}&idNos={{consumer_id}}",
+					"protocol": "https",
+					"host": [
+						"weixin",
+						"haichangchina",
+						"com"
+					],
+					"path": [
+						"order",
+						"ticket"
+					],
+					"query": [
+						{
+							"key": "rateCode",
+							"value": "{{ticket_danren}}"
+						},
+						{
+							"key": "beginDate",
+							"value": "{{date_haichang}}"
+						},
+						{
+							"key": "endDate",
+							"value": "{{date_haichang}}"
+						},
+						{
+							"key": "parkId",
+							"value": "10"
+						},
+						{
+							"key": "couponCode",
+							"value": ""
+						},
+						{
+							"key": "couponCheckCode",
+							"value": ""
+						},
+						{
+							"key": "amount",
+							"value": "1"
+						},
+						{
+							"key": "linkMans",
+							"value": "{{consumer_name}}"
+						},
+						{
+							"key": "teles",
+							"value": "{{login_phone}}"
+						},
+						{
+							"key": "idNos",
+							"value": "{{consumer_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "双人",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie_haichang}}",
+						"disabled": true
+					},
+					{
+						"key": "Origin",
+						"value": "https://weixin.haichangchina.com",
+						"disabled": true
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"disabled": true
+					},
+					{
+						"key": "Referer",
+						"value": "https://weixin.haichangchina.com/order/ticket/ticket2022060100442083?parkId=10",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://weixin.haichangchina.com/order/ticket?rateCode={{ticket_shuangren}}&beginDate={{date_haichang}}&endDate={{date_haichang}}&parkId=10&couponCode=&couponCheckCode=&amount=1&linkMans={{consumer_name}}&teles={{login_phone}}&idNos={{consumer_id}}",
+					"protocol": "https",
+					"host": [
+						"weixin",
+						"haichangchina",
+						"com"
+					],
+					"path": [
+						"order",
+						"ticket"
+					],
+					"query": [
+						{
+							"key": "rateCode",
+							"value": "{{ticket_shuangren}}"
+						},
+						{
+							"key": "beginDate",
+							"value": "{{date_haichang}}"
+						},
+						{
+							"key": "endDate",
+							"value": "{{date_haichang}}"
+						},
+						{
+							"key": "parkId",
+							"value": "10"
+						},
+						{
+							"key": "couponCode",
+							"value": ""
+						},
+						{
+							"key": "couponCheckCode",
+							"value": ""
+						},
+						{
+							"key": "amount",
+							"value": "1"
+						},
+						{
+							"key": "linkMans",
+							"value": "{{consumer_name}}"
+						},
+						{
+							"key": "teles",
+							"value": "{{login_phone}}"
+						},
+						{
+							"key": "idNos",
+							"value": "{{consumer_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "家庭",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie_haichang}}",
+						"disabled": true
+					},
+					{
+						"key": "Origin",
+						"value": "https://weixin.haichangchina.com",
+						"disabled": true
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"disabled": true
+					},
+					{
+						"key": "Referer",
+						"value": "https://weixin.haichangchina.com/order/ticket/ticket2022060100442083?parkId=10",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://weixin.haichangchina.com/order/ticket?rateCode={{ticket_jiating}}&beginDate={{date_haichang}}&endDate={{date_haichang}}&parkId=10&couponCode=&couponCheckCode=&amount=1&linkMans={{consumer_name}}&teles={{login_phone}}&idNos={{consumer_id}}",
+					"protocol": "https",
+					"host": [
+						"weixin",
+						"haichangchina",
+						"com"
+					],
+					"path": [
+						"order",
+						"ticket"
+					],
+					"query": [
+						{
+							"key": "rateCode",
+							"value": "{{ticket_jiating}}"
+						},
+						{
+							"key": "beginDate",
+							"value": "{{date_haichang}}"
+						},
+						{
+							"key": "endDate",
+							"value": "{{date_haichang}}"
+						},
+						{
+							"key": "parkId",
+							"value": "10"
+						},
+						{
+							"key": "couponCode",
+							"value": ""
+						},
+						{
+							"key": "couponCheckCode",
+							"value": ""
+						},
+						{
+							"key": "amount",
+							"value": "1"
+						},
+						{
+							"key": "linkMans",
+							"value": "{{consumer_name}}"
+						},
+						{
+							"key": "teles",
+							"value": "{{login_phone}}"
+						},
+						{
+							"key": "idNos",
+							"value": "{{consumer_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test 海兽喂食票",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{cookie_haichang}}",
+						"disabled": true
+					},
+					{
+						"key": "Origin",
+						"value": "https://weixin.haichangchina.com",
+						"disabled": true
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache",
+						"disabled": true
+					},
+					{
+						"key": "Referer",
+						"value": "https://weixin.haichangchina.com/order/ticket/ticket2022060100442083?parkId=10",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors",
+						"disabled": true
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://weixin.haichangchina.com/order/ticket?rateCode=ticket2021042819290343&beginDate=2022-06-15&endDate=2022-06-15&parkId=10&couponCode=&couponCheckCode=&amount=1&linkMans={{consumer_name}}&teles={{login_phone}}&idNos={{consumer_id}}",
+					"protocol": "https",
+					"host": [
+						"weixin",
+						"haichangchina",
+						"com"
+					],
+					"path": [
+						"order",
+						"ticket"
+					],
+					"query": [
+						{
+							"key": "rateCode",
+							"value": "ticket2021042819290343"
+						},
+						{
+							"key": "beginDate",
+							"value": "2022-06-15"
+						},
+						{
+							"key": "endDate",
+							"value": "2022-06-15"
+						},
+						{
+							"key": "parkId",
+							"value": "10"
+						},
+						{
+							"key": "couponCode",
+							"value": ""
+						},
+						{
+							"key": "couponCheckCode",
+							"value": ""
+						},
+						{
+							"key": "amount",
+							"value": "1"
+						},
+						{
+							"key": "linkMans",
+							"value": "{{consumer_name}}"
+						},
+						{
+							"key": "teles",
+							"value": "{{login_phone}}"
+						},
+						{
+							"key": "idNos",
+							"value": "{{consumer_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ticket_jiating",
+			"value": "ticket2022060100520018"
+		},
+		{
+			"key": "ticket_shuangren",
+			"value": "ticket2022060100483191"
+		},
+		{
+			"key": "ticket_danren",
+			"value": "ticket2022060100442083"
+		},
+		{
+			"key": "login_phone",
+			"value": "139********"
+		},
+		{
+			"key": "login_password",
+			"value": "123456"
+		},
+		{
+			"key": "consumer_name",
+			"value": "某某某"
+		},
+		{
+			"key": "consumer_id",
+			"value": "310115************"
+		},
+		{
+			"key": "date_haichang",
+			"value": "2022-06-06"
+		}
+	]
+}
