@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>海昌抢票攻略</title>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
 <style>
-  .screenshot {width: 600px}
+  .screenshot {
+    height: 20em;
+  }
+
+  .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: aliceblue;
+  }
+
+  .card {
+    vertical-align: top;
+    padding: 2em;
+    display: inline-block;
+  }
 </style>
 <body>
 <h1>
-  海昌抢票攻略
+  &#127906;&#127905;&#127904;海昌抢票攻略&#128044;&#128033;&#128051;
 </h1>
 
 <h2>前提</h2>
@@ -20,22 +36,20 @@
 </ul>
 
 <h2>准备</h2>
-<ol>
-  <li>下载<a href="haichang.postman_collection.json" download/>postman collection</a>到你的电脑</li>
-  <li>导入下载的文件</li>
-  <img src="img/import.png" class="screenshot"></img>
-  <li>右击"海昌"/"修改", 修改你的账号密码，买票人姓名和身份证号</li>
-  <img src="img/info.png" class="screenshot"></img>
-  <li>打开"登录获取cookie"，点击发送</li>
-  <img src="img/login.png" class="screenshot"></img>
-  <li>打开"test 海兽喂食票"，点击发送</li>
-  <img src="img/order.png" class="screenshot"></img>
-</ol>
-好了，现在浏览器打开订单页面https://shop.haichangoceanpark.com/member/order，你将能看到刚刚的"海兽喂食"订单（这里只是测试，千万别支付哦！）。如果看到订单，恭喜你，说明一切准备就绪，静等抢票了！<br>
-温馨提示：一个账号一种类型（单人/双人/家庭）只能抢一个票。如果要抢多张票要注册多个账号哦，最好多台电脑同时抢，如果实在没有多台电脑可以开多个postman窗口。
+<div class="scrolling-wrapper">
+  <div class="card"><h4>1. 点击下载<a href="haichang.postman_collection.json" download>postman collection</a>到你的电脑</h4>
+  </div>
+  <div class="card"><h4>2. 导入下载的文件</h4><img src="img/import.png" class="screenshot" alt=""/></div>
+  <div class="card"><h4>3. 右击"海昌"/"修改", 修改你的账号密码，买票人姓名和身份证号</h4><img src="img/info.png" class="screenshot" alt=""/>
+  </div>
+  <div class="card"><h4>4. 打开"登录获取cookie"，点击发送</h4><img src="img/login.png" class="screenshot" alt=""/></div>
+  <div class="card"><h4>5. 打开"test 海兽喂食票"，点击发送</h4><img src="img/order.png" class="screenshot" alt=""/></div>
+</div>
+好了，现在浏览器打开订单页面https://shop.haichangoceanpark.com/member/order，你将能看到刚刚的"海兽喂食"订单（这里只是测试，千万别支付哦！）。如果看到订单，恭喜你&#9996;，说明一切准备就绪，静等抢票了！<br>
+<em> &#9889;温馨提示：一个账号一种类型（单人/双人/家庭）只能抢一个票。如果要抢多张票要注册多个账号哦，最好多台电脑同时抢，如果实在没有多台电脑可以开多个postman窗口。</em>
 
 <h2>开抢前25分钟登录</h2>
-<b>因为开抢前后网站几乎崩溃，所以一定要提前20-30分钟登录。也不能太早登录，不然登录会过期，又需要重新登录。</b>
+<strong>因为开抢前后网站几乎崩溃，所以一定要提前20-30分钟登录。也不能太早登录，不然登录会过期，又需要重新登录。</strong>
 <ul>
   <li>打开"登录获取cookie"，点击发送</li>
   <li>登录完没事了，确保万无一失可以再次"test 海兽喂食票"</li>
@@ -46,17 +60,20 @@
   <li>打开"单人"，点击发送</li>
   <li>打开"双人"，点击发送</li>
   <li>打开"家庭"，点击发送</li>
-  <li>重复发送，直到成功为止！（按照前两天的经验，一般开抢后18-19分钟容易抢到票。）</li>
-  <ul>
-    <li>如果出现"message": "请勿重复下单!", 说明你手速太快，可以等个5秒再发送。</li>
-    <li>如果出现长长的html说活动太火爆/Error/null, 不要灰心, 坚持抢票30分钟，直到出现类似"海兽喂食"一样的response</li>
-  </ul>
+  <li>重复发送，直到成功为止！（按照前两天的经验，一般开抢后18-19分钟容易抢到票。）
+    <ul>
+      <li>如果出现<samp>"message": "请勿重复下单!"</samp>, 说明你手速太快，可以等个5秒再发送。</li>
+      <li>如果出现<samp>"长长的html说活动太火爆/Error/null</samp>, 不要灰心, 坚持抢票30分钟，直到出现类似"海兽喂食"一样的response</li>
+    </ul>
+  </li>
 </ol>
 
-<h2>抢到喽</h2>
-<b>还没结束，一定到订单页面支付哦，浏览器打开https://shop.haichangoceanpark.com/member/order，<span style="color: deeppink">虽然是0元，也要点支付，不然订单会自动取消哦！！！</span></b>
+<h2>抢到喽&#127881;</h2>
+<strong>还没结束，一定到订单页面支付哦，浏览器打开https://shop.haichangoceanpark.com/member/order，
+  <mark>虽然是0元，也要点支付，不然订单会自动取消哦！！！</mark>
+</strong>
 
-<div style="visibility: hidden">
+<div hidden>
   <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 </div>
 </body>
