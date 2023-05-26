@@ -7,8 +7,8 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background: #fff;
-			color: #000;
+			background: #000;
+			color: #fff;
 			font-family: sans-serif;
 		}
 		video {
@@ -52,16 +52,31 @@
 			font-size: 20px;
 		}
 
-
   </style>
 </head>
 <body>
-<video autoplay muted loop>
-  <source src="sap.mp4" type="video/mp4" poster="img/import.png">
-  浏览器不支持视频。
-</video>
+<script>
+		var videoBg = document.createElement('video');
+		videoBg.src = 'sap.mp4';
+		videoBg.autoplay = true;
+		videoBg.muted = true;
+		videoBg.loop = true;
+
+		videoBg.addEventListener('canplaythrough', function() {
+			videoBg.play();
+		});
+
+		videoBg.addEventListener('error', function() {
+			document.body.style.backgroundImage = "url('img/import.png')";
+		});
+
+		document.body.appendChild(videoBg);
+
+</script>
+
+<button>Click me</button>
 <div class="navbar">
-  <a href="#">Home3</a>
+  <a href="#">Home</a>
   <a href="#">About</a>
   <a href="#">Contact</a>
 </div>
