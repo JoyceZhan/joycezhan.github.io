@@ -4,81 +4,51 @@
   <meta charset="UTF-8">
   <title>Video Background</title>
   <style>
-		body {
-			margin: 0;
-			padding: 0;
-			background: #000;
-			color: #fff;
-			font-family: sans-serif;
-		}
-		video {
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			z-index: -1;
-		}
-		button {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			padding: 10px 20px;
-			background: #fff;
-			color: #000;
-			border: none;
-			border-radius: 5px;
-			font-size: 20px;
-			cursor: pointer;
-		}
-		.navbar {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: rgba(0, 0, 0, 0.5);
-			padding: 10px;
-			box-sizing: border-box;
-			z-index: 1;
-		}
-		.navbar a {
-			color: #fff;
-			text-decoration: none;
-			margin-right: 20px;
-			font-size: 20px;
-		}
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  z-index: -3;
+}
+
+.header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -3;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.overlay {
+  background-color: white;
+  z-index: -2;
+  opacity: 0.7;
+}
 
   </style>
 </head>
 <body>
-<script>
-		var videoBg = document.createElement('video');
-		videoBg.src = 'sap.mp4';
-		videoBg.autoplay = true;
-		videoBg.muted = true;
-		videoBg.loop = true;
-
-		videoBg.addEventListener('canplaythrough', function() {
-			videoBg.play();
-		});
-
-		videoBg.addEventListener('error', function() {
-			document.body.style.backgroundImage = "url('img/import.png')";
-		});
-
-		document.body.appendChild(videoBg);
-
-</script>
-
-<button>Click me</button>
-<div class="navbar">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</div>
+<header class="header">
+  <video playsInline="playsinline" autoPlay="autoplay" loop="loop" muted>
+    <source src="sap.mp4" type="video/mp4"/>
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <span>HOME</span>
+  </div>
+  <div style="color:white">
+    button
+  </div>
+</header>
 </body>
 </html>
